@@ -15,6 +15,8 @@ func main() {
 	const message string = "Hello, World!"
 	fmt.Println(message)
 	sample1()
+	sample2()
+	sample3()
 }
 
 func sample1() {
@@ -26,4 +28,22 @@ func sample1() {
 	)
 	fmt.Println("サンプルだよ")
 	fmt.Printf("%d, %d, %d, %d\n", c, d, e, f)
+}
+
+func sample2() {
+	num := 3
+	fmt.Println("サンプルだよ")
+	fmt.Printf("%d\n", num)
+}
+
+func sample3() {
+	// ifの中でのみ使える値「num」（変数名はなんでもOK）を宣言できる
+	if num := 3; num > 0 {
+		println("numは整数！")
+	} else {
+		println("numは負の値！")
+	}
+	// コンパイルエラー
+	// undefined: num
+	// println(num)
 }
