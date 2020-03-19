@@ -17,6 +17,7 @@ func main() {
 	sample1()
 	sample2()
 	sample3()
+	sample5()
 }
 
 func sample1() {
@@ -46,4 +47,28 @@ func sample3() {
 	// コンパイルエラー
 	// undefined: num
 	// println(num)
+}
+
+func sample4() {
+	num := 5
+	switch num {
+	case 3, 5:
+		fmt.Println("3か5")
+		// breakいらない
+		// 連鎖させたい場合は、「fallthrough」を使う
+	default:
+		fmt.Println("3じゃないし、５じゃない")
+	}
+}
+
+func sample5() {
+	fmt.Println("ーーーーーーーーーーーーーーー")
+	fmt.Println("少し長いforが流れます")
+	for i := 1; i <= 100; i++ {
+		if i%2 == 0 {
+			fmt.Printf("%d-偶数\n", i)
+		} else {
+			fmt.Printf("%d-奇数\n", i)
+		}
+	}
 }
