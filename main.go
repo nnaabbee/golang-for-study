@@ -3,6 +3,7 @@ package main
 import "fmt"
 
 func main() {
+	fmt.Println("ああああああ")
 	var aaa int = 1_000_000
 	var bbb = 2
 	fmt.Printf("%d, %d\n", aaa, bbb)
@@ -18,6 +19,7 @@ func main() {
 	sample2()
 	sample3()
 	sample5()
+	const abc = 123
 }
 
 func sample1() {
